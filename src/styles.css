@@ -1,1 +1,98 @@
 /* You can add global styles to this file, and also import other style files */
+* {
+  font-family: 'Lato', sans-serif;
+}
+
+body {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+
+form {
+  margin: 20px;
+}
+
+input {
+  margin: 20px;
+  border-style: solid 1px;
+  
+  border-color: rgb(26, 115, 138);
+  font-size: 18px;
+}
+
+.subjectInput {
+  height: 25px;
+}
+
+.messageInput {
+  height: 65px;
+}
+.postDiv {
+  border-bottom-style: double; 
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  justify-content: center;
+}
+
+.contentDiv { 
+  width: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+p {
+  width: 80%;
+}
+
+h1 { 
+  color: rgb(26, 115, 138);
+  font-family: 'Shadows Into Light', cursive;
+  font-size: 80px;
+}
+
+h3 {
+  color: rgb(26, 115, 138);
+  text-decoration-line: underline;
+  float: left;
+  margin: 15px;
+}
+
+i {
+  font-family: "Font Awesome 5 Free";
+  margin: 15px;
+  float: right;
+}
+
+button {
+  background-color:rgb(26, 115, 138);
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  width: 40%;
+}
+
+.submitDiv {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin: 15px;
+}
+
+.inputDiv {
+  display: flex;
+  flex-direction: column;
+  margin: 15px;
+
+}
+
+.newPostButton {
+  width: 90%;
+}
+
