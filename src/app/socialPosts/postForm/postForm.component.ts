@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 // import { SocialPostsComponent } from './socialPosts/socialPosts.component';
 
 @Component({
@@ -12,10 +12,23 @@ export class PostFormComponent {
   // @Input() postArray: posts;
   postArray: any;
   changed: any;
+  bodyPost: any;
+  subjectPost: any;
+ 
+  @Output() submitted = new EventEmitter<any>();
+  
+  onSubmit = () => {    
+    this.submitted.emit({
+    body: this.bodyPost,
+    subject: this.subjectPost,
+    });
+    this.form = !this.form;
+  };
+
   
   newPost = () => {
     this.form = !this.form;
-    // this.changed.emit(true);
   };
+
 
 }

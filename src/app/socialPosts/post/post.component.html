@@ -1,2 +1,9 @@
 <!-- <p *ngFor="let post of postArray; let i = index" [post]="post">{{ post.subject }} {{post.body}}</p> -->
 
+<div class='postDiv'>
+    <h3>  {{ post.subject }}  </h3>
+    <div class='contentDiv'>
+      <p> {{post.body}}  </p>
+      <i (click)= "deletePost(i) *ngIf" class="fas fa-times"></i>
+    </div>
+  </div>

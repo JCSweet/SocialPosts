@@ -1,15 +1,14 @@
 <button (click)='newPost()' class='newPostButton'>New Post</button>
 
 <div *ngIf='form'>
-  <form action="./post.component.ts">
+  <form>
     <div class='inputDiv'>
-      <input type="text" name='makeSubject' placeholder="Subject" class='subjectInput'>
-      <input type="text" name='makePost' placeholder="Message" class='messageInput'>
+      <input [(ngModel)]= "subjectPost" type="text" name='makeSubject' placeholder="Subject" class='subjectInput'>
+      <input [(ngModel)]= "bodyPost" type="text" name='makePost' placeholder="Message" class='messageInput'>
     </div>
     <div class='submitDiv'>
-      <button type='submit' (click)='addPost()'>Submit</button>
+      <button type='submit' (click)='onSubmit()'>Submit</button>
       <button type="button" (click)='newPost()'>Cancel</button>
     </div>
   </form>
 </div>
-<div *ngIf='!form'></div>

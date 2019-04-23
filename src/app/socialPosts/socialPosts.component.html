@@ -1,11 +1,7 @@
 <!-- <button (click)='newPost()'>New Post</button> -->
 
+<postForm (submitted)="onSubmit($event)"></postForm>
 
-<div *ngFor="let post of postArray; let i = index" class='postDiv'>
-  <h3>  {{ post.subject }}  </h3>
-  <div class='contentDiv'>
-    <p> {{post.body}}  </p>
-    <i (click)= "deletePost(i) *ngIf" class="fas fa-times"></i>
-  </div>
-</div>
+
+<post [post]="post" *ngFor="let post of postArray; let i = index"></post>
 

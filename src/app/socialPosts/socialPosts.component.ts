@@ -22,8 +22,8 @@ import { AppComponent } from '../app.component';
      
       posts = this.postArray;
 
-      onChanged = event => {
-        console.log(event);
+      onSubmit = (event) => {
+        this.posts.push(event)
       };
       deletePost = (index: any) => {
         this.posts.splice(index, 1)
